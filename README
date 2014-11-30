@@ -1,0 +1,58 @@
+Summary
+-------
+Maven archetype providing a pre-configured Spring MVC setup out of the box. The setup represents how I like things configured for a quick setup so YMMV.
+
+This is my first archetype, feel free to send patches if you find something that can be improved.
+
+
+Contact
+-------
+Chris Schaefer - imzhangbohan@gmail.com
+
+
+Features
+--------
+Some features that work out of the box are:
+
+* Bare bones Spring MVC controller and a simple test.
+* Tomcat ready (maven plugin).
+* Annotation driven Spring MVC controllers.
+* Configured ContentNegotiatingViewResolver, with JSON as a registered media type.
+* JSTL view resolver.
+* Cookie based locale resolver / interceptor.
+* Transaction support.
+* UTF-8 character encoding filter for web pages.
+* Spring taglib support.
+* i18n support via Spring MessageSource.
+* Basic DataSource configuration, JdbcTemplate and TransactionManager configuration. Its up to you to configure the dataSource
+  in datasource-beans.xml for persistence to actually do something.
+* PropertyPlaceholder support.
+
+
+Local Install
+-------------
+clone repository
+cd maven-bohan-qucik-start-archetype (or your custom clone location)
+mvn install
+
+
+Use
+---
+cd ~/work (or wherever you want to build to)
+
+mvn archetype:generate \
+  -DarchetypeGroupId=me.nengzhe \
+  -DarchetypeArtifactId=maven-bohan-qucik-start-archetype \
+  -DarchetypeVersion=1.0-SNAPSHOT \
+  -DgroupId=your_group_id \
+  -DartifactId=the_artifact_id \
+  -Dpackage=the_package_name
+  -DinteractiveMode=false \
+  -DarchetypeCatalog=local
+
+Answer the questions and the build will end up in a directory named after your artifact ID. Configure the dataSource bean in datasource-beans.xml to match your database configuration.
+
+cd $artifactId ; mvn jetty:run
+
+Go to http://localhost:8000/ and the example page should load.
+
