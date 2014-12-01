@@ -1,5 +1,3 @@
 target
-*g.iml
-maven-springmvc-archetype.ipr
-maven-springmvc-archetype.iws
+*.iml
 .idea/

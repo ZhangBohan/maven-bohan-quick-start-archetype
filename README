@@ -1,23 +1,16 @@
 Summary
 -------
-Maven archetype providing a pre-configured Spring MVC setup out of the box. The setup represents how I like things configured for a quick setup so YMMV.
+This maven archetype providing Spring MVC + SpringSecurity + Hibernate + Admin Template
 
 This is my first archetype, feel free to send patches if you find something that can be improved.
-
-
-Contact
--------
-Chris Schaefer - imzhangbohan@gmail.com
-
 
 Features
 --------
 Some features that work out of the box are:
 
-* Bare bones Spring MVC controller and a simple test.
-* Tomcat ready (maven plugin).
+* Spring MVC controller
+* Jetty ready (maven plugin).
 * Annotation driven Spring MVC controllers.
-* Configured ContentNegotiatingViewResolver, with JSON as a registered media type.
 * JSTL view resolver.
 * Cookie based locale resolver / interceptor.
 * Transaction support.
